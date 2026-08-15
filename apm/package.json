@@ -1,9 +1,9 @@
 {
-  "name": "atom-bundled-apm",
-  "description": "Atom's bundled apm",
+  "name": "atomic-bundled-apm",
+  "description": "Atomic's bundled apm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/atom.git"
+    "url": "https://github.com/atomic-editor/atomic.git"
   },
   "dependencies": {
     "atom-package-manager": "2.6.2"

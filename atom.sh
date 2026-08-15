@@ -10,13 +10,13 @@ else
 fi
 
 case $(basename $0) in
-  atom-beta)
+  atomic-beta)
     CHANNEL=beta
     ;;
-  atom-nightly)
+  atomic-nightly)
     CHANNEL=nightly
     ;;
-  atom-dev)
+  atomic-dev)
     CHANNEL=dev
     ;;
   *)
@@ -87,7 +87,7 @@ if [ $REDIRECT_STDERR ]; then
   exec 2> /dev/null
 fi
 
-ATOM_HOME="${ATOM_HOME:-$HOME/.atom}"
+  ATOM_HOME="${ATOM_HOME:-$HOME/.atomic}"
 mkdir -p "$ATOM_HOME"
 
 if [ $OS == 'Mac' ]; then
@@ -110,25 +110,25 @@ if [ $OS == 'Mac' ]; then
   else
     # Else choose it from the inferred channel name
     if [ "$CHANNEL" == 'beta' ]; then
-      ATOM_EXECUTABLE_NAME="Atom Beta"
+      ATOM_EXECUTABLE_NAME="Atomic Beta"
     elif [ "$CHANNEL" == 'nightly' ]; then
-      ATOM_EXECUTABLE_NAME="Atom Nightly"
+      ATOM_EXECUTABLE_NAME="Atomic Nightly"
     elif [ "$CHANNEL" == 'dev' ]; then
-      ATOM_EXECUTABLE_NAME="Atom Dev"
+      ATOM_EXECUTABLE_NAME="Atomic Dev"
     else
-      ATOM_EXECUTABLE_NAME="Atom"
+      ATOM_EXECUTABLE_NAME="Atomic"
     fi
   fi
 
   if [ -z "${ATOM_PATH}" ]; then
-    # If ATOM_PATH isn't set, check /Applications and then ~/Applications for Atom.app
+    # If ATOM_PATH isn't set, check /Applications and then ~/Applications for Atomic.app
     if [ -x "/Applications/$ATOM_APP_NAME" ]; then
       ATOM_PATH="/Applications"
     elif [ -x "$HOME/Applications/$ATOM_APP_NAME" ]; then
       ATOM_PATH="$HOME/Applications"
     else
-      # We haven't found an Atom.app, use spotlight to search for Atom
-      ATOM_PATH="$(mdfind "kMDItemCFBundleIdentifier == 'com.github.atom'" | grep -v ShipIt | head -1 | xargs -0 dirname)"
+      # We haven't found an Atomic.app, use spotlight to search for Atomic
+      ATOM_PATH="$(mdfind "kMDItemCFBundleIdentifier == 'com.github.atomic'" | grep -v ShipIt | head -1 | xargs -0 dirname)"
 
       # Exit if Atom can't be found
       if [ ! -x "$ATOM_PATH/$ATOM_APP_NAME" ]; then
@@ -153,20 +153,20 @@ elif [ $OS == 'Linux' ]; then
   SCRIPT=$(readlink -f "$0")
   USR_DIRECTORY=$(readlink -f $(dirname $SCRIPT)/..)
 
-  case $CHANNEL in
-    beta)
-      ATOM_PATH="$USR_DIRECTORY/share/atom-beta/atom"
-      ;;
-    nightly)
-      ATOM_PATH="$USR_DIRECTORY/share/atom-nightly/atom"
-      ;;
-    dev)
-      ATOM_PATH="$USR_DIRECTORY/share/atom-dev/atom"
-      ;;
-    *)
-      ATOM_PATH="$USR_DIRECTORY/share/atom/atom"
-      ;;
-  esac
+    case $CHANNEL in
+      beta)
+        ATOM_PATH="$USR_DIRECTORY/share/atomic-beta/atomic"
+        ;;
+      nightly)
+        ATOM_PATH="$USR_DIRECTORY/share/atomic-nightly/atomic"
+        ;;
+      dev)
+        ATOM_PATH="$USR_DIRECTORY/share/atomic-dev/atomic"
+        ;;
+      *)
+        ATOM_PATH="$USR_DIRECTORY/share/atomic/atomic"
+        ;;
+    esac
 
   #Will allow user to get context menu on cinnamon desktop enviroment
   if [[ "$(expr substr $(printenv | grep "DESKTOP_SESSION=") 17 8)" == "cinnamon" ]]; then
@@ -175,7 +175,7 @@ elif [ $OS == 'Linux' ]; then
 
   : ${TMPDIR:=/tmp}
 
-  [ -x "$ATOM_PATH" ] || ATOM_PATH="$TMPDIR/atom-build/Atom/atom"
+      [ -x "$ATOM_PATH" ] || ATOM_PATH="$TMPDIR/atomic-build/Atomic/atomic"
 
   if [ $EXPECT_OUTPUT ]; then
     "$ATOM_PATH" --executed-from="$(pwd)" --pid=$$ "$@"

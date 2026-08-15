@@ -587,7 +587,7 @@ module.exports = class AtomApplication extends EventEmitter {
       shell.openExternal('http://flight-manual.atom.io')
     );
     this.on('application:open-discussions', () =>
-      shell.openExternal('https://github.com/atom/atom/discussions')
+      shell.openExternal('https://github.com/atomic-editor/atomic/discussions')
     );
     this.on('application:open-faq', () =>
       shell.openExternal('https://atom.io/faq')
@@ -597,11 +597,11 @@ module.exports = class AtomApplication extends EventEmitter {
     );
     this.on('application:report-issue', () =>
       shell.openExternal(
-        'https://github.com/atom/atom/blob/master/CONTRIBUTING.md#reporting-bugs'
+        'https://github.com/atomic-editor/atomic/blob/master/CONTRIBUTING.md#reporting-bugs'
       )
     );
     this.on('application:search-issues', () =>
-      shell.openExternal('https://github.com/search?q=+is%3Aissue+user%3Aatom')
+      shell.openExternal('https://github.com/search?q=+is%3Aissue+user%3Aatomic-editor')
     );
 
     this.on('application:install-update', () => {

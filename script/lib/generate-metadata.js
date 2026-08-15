@@ -2,6 +2,7 @@
 
 const CSON = require('season');
 const deprecatedPackagesMetadata = require('../deprecated-packages');
+const aiBannedPackagesMetadata = require('../ai-banned-packages');
 const fs = require('fs-plus');
 const normalizePackageData = require('normalize-package-data');
 const path = require('path');
@@ -27,6 +28,7 @@ module.exports = function() {
   CONFIG.appMetadata._atomMenu = buildPlatformMenuMetadata();
   CONFIG.appMetadata._atomKeymaps = buildPlatformKeymapsMetadata();
   CONFIG.appMetadata._deprecatedPackages = deprecatedPackagesMetadata;
+  CONFIG.appMetadata._aiBannedPackages = aiBannedPackagesMetadata;
   CONFIG.appMetadata.version = CONFIG.computedAppVersion;
   CONFIG.appMetadata.name = appName;
   CONFIG.appMetadata.productName = CONFIG.appName;
@@ -48,6 +50,7 @@ module.exports = function() {
   CONFIG.appMetadata._atomMenu = buildPlatformMenuMetadata();
   CONFIG.appMetadata._atomKeymaps = buildPlatformKeymapsMetadata();
   CONFIG.appMetadata._deprecatedPackages = deprecatedPackagesMetadata;
+  CONFIG.appMetadata._aiBannedPackages = aiBannedPackagesMetadata;
   CONFIG.appMetadata.version = CONFIG.computedAppVersion;
   checkDeprecatedPackagesMetadata();
   fs.writeFileSync(

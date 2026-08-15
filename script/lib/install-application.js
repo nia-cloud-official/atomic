@@ -82,8 +82,8 @@ module.exports = function(packagedAppPath, installDir) {
       CONFIG.channel === 'stable' ? 'apm' : 'apm-' + CONFIG.channel;
     const appName =
       CONFIG.channel === 'stable'
-        ? 'Atom'
-        : startCase('Atom ' + CONFIG.channel);
+        ? 'Atomic'
+        : startCase('Atomic ' + CONFIG.channel);
     const appDescription = CONFIG.appMetadata.description;
     const prefixDirPath =
       installDir !== '' ? handleTilde(installDir) : path.join('/usr', 'local');

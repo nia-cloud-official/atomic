@@ -29,7 +29,7 @@ export default class Reporter {
     return {
       apiKey: API_KEY,
       notifier: {
-        name: 'Atom',
+        name: 'Atomic',
         version: LIB_VERSION,
         url: 'https://www.atom.io'
       },

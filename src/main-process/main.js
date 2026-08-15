@@ -25,7 +25,7 @@ function isAtomRepoPath(repoPath) {
   if (fs.statSyncNoException(packageJsonPath)) {
     try {
       let packageJson = CSON.readFileSync(packageJsonPath);
-      return packageJson.name === 'atom';
+      return packageJson.name === 'atomic';
     } catch (e) {
       return false;
     }
@@ -44,8 +44,8 @@ if (args.resourcePath) {
   const stableResourcePath = path.dirname(path.dirname(__dirname));
   const defaultRepositoryPath = path.join(
     app.getPath('home'),
-    'github',
-    'atom'
+    'atomic-editor',
+    'atomic'
   );
 
   if (process.env.ATOM_DEV_RESOURCE_PATH) {

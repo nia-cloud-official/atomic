@@ -164,8 +164,8 @@ module.exports = class ApplicationMenu {
   getDefaultTemplate() {
     return [
       {
-        label: 'Atom',
-        id: 'Atom',
+        label: 'Atomic',
+        id: 'Atomic',
         submenu: [
           {
             label: 'Check for Update',

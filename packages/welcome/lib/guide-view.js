@@ -379,7 +379,7 @@ export default class GuideView {
 
   getApplicationMenuName() {
     if (process.platform === 'darwin') {
-      return 'Atom';
+      return 'Atomic';
     } else if (process.platform === 'linux') {
       return 'Edit';
     } else {
