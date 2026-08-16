@@ -88,7 +88,7 @@ export default class WelcomeView {
                 </g>
               </svg>
               <h1 className="welcome-title">
-                A hackable text editor for the 21<sup>st</sup> Century
+                A strict, human-first editor for normal coding
               </h1>
             </a>
           </header>
@@ -102,12 +102,12 @@ export default class WelcomeView {
                   href="https://www.atom.io/docs"
                   dataset={{ event: 'atom-docs' }}
                 >
-                  Atom docs
+                  Atomic docs
                 </a>{' '}
                 for Guides and the API reference.
               </li>
               <li>
-                The Atom forum at{' '}
+                The Atomic forum at{' '}
                 <a
                   href="https://github.com/atom/atom/discussions"
                   dataset={{ event: 'discussions' }}
@@ -118,12 +118,12 @@ export default class WelcomeView {
               <li>
                 The{' '}
                 <a
-                  href="https://github.com/atom"
-                  dataset={{ event: 'atom-org' }}
+                  href="https://github.com/atomic-editor"
+                  dataset={{ event: 'atomic-org' }}
                 >
-                  Atom org
+                  Atomic org
                 </a>
-                . This is where all GitHub-created Atom packages can be found.
+                .
               </li>
             </ul>
           </section>
@@ -136,7 +136,7 @@ export default class WelcomeView {
                 checked={atom.config.get('welcome.showOnStartup')}
                 onchange={this.didChangeShowOnStartup}
               />
-              Show Welcome Guide when opening Atom
+              Show Welcome Guide when opening Atomic
             </label>
           </section>
 

@@ -1,7 +1,7 @@
 {
   "name": "welcome",
   "version": "0.36.9",
-  "description": "Welcome users to Atom with useful information",
+  "description": "Welcome users to Atomic with useful information",
   "main": "./lib/main",
   "atomTestRunner": "atom-mocha-test-runner",
   "repository": "https://github.com/atom/atom",
@@ -28,15 +28,14 @@
     },
     "showSunsettingOnStartup": {
       "type": "boolean",
-      "default": true,
-      "description": "Show sunsetting pane when opening a new Atom window."
+      "default": false,
+      "description": "Show sunsetting pane when opening a new Atomic window."
     }
   },
   "deserializers": {
     "WelcomeView": "createWelcomeView",
     "GuideView": "createGuideView",
-    "ConsentView": "createConsentView",
-    "SunsettingView": "createSunsettingView"
+    "ConsentView": "createConsentView"
   },
   "dependencies": {
     "etch": "0.9.0"

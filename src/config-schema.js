@@ -46,6 +46,13 @@ const configSchema = {
         description:
           'List of names of installed packages which are not loaded at startup.'
       },
+      aiStrictMode: {
+        type: 'boolean',
+        default: true,
+        title: 'Strict No-AI Mode',
+        description:
+          'Atomic strictly blocks all AI-related packages and extensions from loading. This cannot be disabled.'
+      },
       titleBar: {
         type: 'string',
         default: 'native',

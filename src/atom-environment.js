@@ -249,7 +249,7 @@ class AtomEnvironment {
 
     ConfigSchema.projectHome = {
       type: 'string',
-      default: path.join(fs.getHomeDirectory(), 'github'),
+      default: path.join(fs.getHomeDirectory(), 'projects'),
       description:
         'The directory where projects are assumed to be located. Packages created using the Package Generator will be stored here by default.'
     };
@@ -555,7 +555,7 @@ class AtomEnvironment {
     return this.firstLoad;
   }
 
-  // Public: Get the full name of this Atom release (e.g. "Atom", "Atom Beta")
+  // Public: Get the full name of this Atomic release (e.g. "Atomic", "Atomic Beta")
   //
   // Returns the app name {String}.
   getAppName() {
@@ -563,7 +563,7 @@ class AtomEnvironment {
     return this.appName;
   }
 
-  // Public: Get the version of the Atom application.
+  // Public: Get the version of the Atomic application.
   //
   // Returns the version text {String}.
   getVersion() {
@@ -572,7 +572,7 @@ class AtomEnvironment {
     return this.appVersion;
   }
 
-  // Public: Gets the release channel of the Atom application.
+  // Public: Gets the release channel of the Atomic application.
   //
   // Returns the release channel as a {String}. Will return a specific release channel
   // name like 'beta' or 'nightly' if one is found in the Atom version or 'stable'

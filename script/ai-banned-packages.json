@@ -1,0 +1,658 @@
+{
+  "github-copilot": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "copilot": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "codeium": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "tabnine": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "codewhisperer": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "amazon-codewhisperer": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "codium": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "continue": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "continue-dev": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "cursor": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "ai-assistant": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "ai-assistant-plus": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "chatgpt": {
+    "version": "*",
+    "reason": "AI chatbot integration"
+  },
+  "chatgpt-gpt3": {
+    "version": "*",
+    "reason": "AI chatbot integration"
+  },
+  "gpt-3": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "gpt-4": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "openai": {
+    "version": "*",
+    "reason": "AI service integration"
+  },
+  "claude": {
+    "version": "*",
+    "reason": "AI assistant integration"
+  },
+  "claude-code": {
+    "version": "*",
+    "reason": "AI assistant integration"
+  },
+  "gemini": {
+    "version": "*",
+    "reason": "AI assistant integration"
+  },
+  "perplexity": {
+    "version": "*",
+    "reason": "AI search integration"
+  },
+  "phind": {
+    "version": "*",
+    "reason": "AI search integration"
+  },
+  "sourcegraph-cody": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "huggingface": {
+    "version": "*",
+    "reason": "AI model platform integration"
+  },
+  "ollama": {
+    "version": "*",
+    "reason": "AI model runtime integration"
+  },
+  "llama": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "mistral": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "groq": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "together-ai": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "deepseek": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "qwen": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "zhipu": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "minimax": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "moonshot": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "baichuan": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "yi": {
+    "version": "*",
+    "reason": "AI model integration"
+  },
+  "mcp-client": {
+    "version": "*",
+    "reason": "Model Context Protocol client"
+  },
+  "mcp-server": {
+    "version": "*",
+    "reason": "Model Context Protocol server"
+  },
+  "modelcontextprotocol": {
+    "version": "*",
+    "reason": "Model Context Protocol"
+  },
+  "model-context-protocol": {
+    "version": "*",
+    "reason": "Model Context Protocol"
+  },
+  "ai-tools": {
+    "version": "*",
+    "reason": "AI tools integration"
+  },
+  "ai-toolkit": {
+    "version": "*",
+    "reason": "AI tools integration"
+  },
+  "ai-pair-programmer": {
+    "version": "*",
+    "reason": "AI pair programming"
+  },
+  "ai-companion": {
+    "version": "*",
+    "reason": "AI companion"
+  },
+  "autocomplete-ai": {
+    "version": "*",
+    "reason": "AI autocomplete"
+  },
+  "intellicode": {
+    "version": "*",
+    "reason": "AI-assisted development"
+  },
+  "kite": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "blackbox": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "marscode": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "sprightly": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "bugbot": {
+    "version": "*",
+    "reason": "AI bug detection"
+  },
+  "codegpt": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "codegptx": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "pilot": {
+    "version": "*",
+    "reason": "AI coding assistant (generic)"
+  },
+  "ai-pilot": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "supercharger": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "wizard": {
+    "version": "*",
+    "reason": "AI coding assistant (generic)"
+  },
+  "ai-wizard": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "mentat": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "gpt-index": {
+    "version": "*",
+    "reason": "AI indexing"
+  },
+  "langchain": {
+    "version": "*",
+    "reason": "AI framework"
+  },
+  "semantic-kernel": {
+    "version": "*",
+    "reason": "AI SDK"
+  },
+  "transformers": {
+    "version": "*",
+    "reason": "AI model library"
+  },
+  "diffblue": {
+    "version": "*",
+    "reason": "AI unit test generation"
+  },
+  "diffblue-cover": {
+    "version": "*",
+    "reason": "AI unit test generation"
+  },
+  "autopilot": {
+    "version": "*",
+    "reason": "AI coding assistant (generic)"
+  },
+  "github-autopilot": {
+    "version": "*",
+    "reason": "AI coding assistant"
+  },
+  "smart-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "smart-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "ai-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "neural-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "ml-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "deep-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "intelli-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "predictive-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "smart-complete": {
+    "version": "*",
+    "reason": "AI completion"
+  },
+  "ai-suggest": {
+    "version": "*",
+    "reason": "AI suggestions"
+  },
+  "smart-suggest": {
+    "version": "*",
+    "reason": "AI suggestions"
+  },
+  "code-suggest": {
+    "version": "*",
+    "reason": "AI suggestions"
+  },
+  "ai-lint": {
+    "version": "*",
+    "reason": "AI linting"
+  },
+  "smart-lint": {
+    "version": "*",
+    "reason": "AI linting"
+  },
+  "ai-refactor": {
+    "version": "*",
+    "reason": "AI refactoring"
+  },
+  "smart-refactor": {
+    "version": "*",
+    "reason": "AI refactoring"
+  },
+  "ai-docs": {
+    "version": "*",
+    "reason": "AI documentation"
+  },
+  "smart-docs": {
+    "version": "*",
+    "reason": "AI documentation"
+  },
+  "ai-review": {
+    "version": "*",
+    "reason": "AI code review"
+  },
+  "smart-review": {
+    "version": "*",
+    "reason": "AI code review"
+  },
+  "ai-test": {
+    "version": "*",
+    "reason": "AI test generation"
+  },
+  "smart-test": {
+    "version": "*",
+    "reason": "AI test generation"
+  },
+  "ai-debug": {
+    "version": "*",
+    "reason": "AI debugging"
+  },
+  "smart-debug": {
+    "version": "*",
+    "reason": "AI debugging"
+  },
+  "ai-chat": {
+    "version": "*",
+    "reason": "AI chat"
+  },
+  "smart-chat": {
+    "version": "*",
+    "reason": "AI chat"
+  },
+  "ai-commit": {
+    "version": "*",
+    "reason": "AI commit messages"
+  },
+  "smart-commit": {
+    "version": "*",
+    "reason": "AI commit messages"
+  },
+  "ai-pr": {
+    "version": "*",
+    "reason": "AI PR descriptions"
+  },
+  "smart-pr": {
+    "version": "*",
+    "reason": "AI PR descriptions"
+  },
+  "ai-explain": {
+    "version": "*",
+    "reason": "AI code explanation"
+  },
+  "smart-explain": {
+    "version": "*",
+    "reason": "AI code explanation"
+  },
+  "ai-translate": {
+    "version": "*",
+    "reason": "AI code translation"
+  },
+  "smart-translate": {
+    "version": "*",
+    "reason": "AI code translation"
+  },
+  "ai-generate": {
+    "version": "*",
+    "reason": "AI code generation"
+  },
+  "smart-generate": {
+    "version": "*",
+    "reason": "AI code generation"
+  },
+  "ai-bot": {
+    "version": "*",
+    "reason": "AI bot"
+  },
+  "ai-agent": {
+    "version": "*",
+    "reason": "AI agent"
+  },
+  "smart-agent": {
+    "version": "*",
+    "reason": "AI agent"
+  },
+  "code-agent": {
+    "version": "*",
+    "reason": "AI code agent"
+  },
+  "code-buddy": {
+    "version": "*",
+    "reason": "AI coding buddy"
+  },
+  "code-companion": {
+    "version": "*",
+    "reason": "AI coding companion"
+  },
+  "code-helper": {
+    "version": "*",
+    "reason": "AI coding helper"
+  },
+  "code-wizard": {
+    "version": "*",
+    "reason": "AI coding wizard"
+  },
+  "code-mentor": {
+    "version": "*",
+    "reason": "AI coding mentor"
+  },
+  "code-tutor": {
+    "version": "*",
+    "reason": "AI coding tutor"
+  },
+  "code-reviewer": {
+    "version": "*",
+    "reason": "AI code reviewer"
+  },
+  "code-optimizer": {
+    "version": "*",
+    "reason": "AI code optimizer"
+  },
+  "code-fixer": {
+    "version": "*",
+    "reason": "AI code fixer"
+  },
+  "code-formatter": {
+    "version": "*",
+    "reason": "AI code formatter"
+  },
+  "code-analyzer": {
+    "version": "*",
+    "reason": "AI code analyzer"
+  },
+  "code-scanner": {
+    "version": "*",
+    "reason": "AI code scanner"
+  },
+  "code-detector": {
+    "version": "*",
+    "reason": "AI code detector"
+  },
+  "code-predictor": {
+    "version": "*",
+    "reason": "AI code predictor"
+  },
+  "code-suggester": {
+    "version": "*",
+    "reason": "AI code suggester"
+  },
+  "code-recommender": {
+    "version": "*",
+    "reason": "AI code recommender"
+  },
+  "code-enhancer": {
+    "version": "*",
+    "reason": "AI code enhancer"
+  },
+  "code-improver": {
+    "version": "*",
+    "reason": "AI code improver"
+  },
+  "code-polisher": {
+    "version": "*",
+    "reason": "AI code polisher"
+  },
+  "code-refiner": {
+    "version": "*",
+    "reason": "AI code refiner"
+  },
+  "code-simplifier": {
+    "version": "*",
+    "reason": "AI code simplifier"
+  },
+  "code-explain": {
+    "version": "*",
+    "reason": "AI code explainer"
+  },
+  "code-docs": {
+    "version": "*",
+    "reason": "AI code docs"
+  },
+  "code-summary": {
+    "version": "*",
+    "reason": "AI code summary"
+  },
+  "code-notes": {
+    "version": "*",
+    "reason": "AI code notes"
+  },
+  "code-highlights": {
+    "version": "*",
+    "reason": "AI code highlights"
+  },
+  "code-insights": {
+    "version": "*",
+    "reason": "AI code insights"
+  },
+  "code-intel": {
+    "version": "*",
+    "reason": "AI code intelligence"
+  },
+  "code-brain": {
+    "version": "*",
+    "reason": "AI code brain"
+  },
+  "code-mind": {
+    "version": "*",
+    "reason": "AI code mind"
+  },
+  "code-genius": {
+    "version": "*",
+    "reason": "AI code genius"
+  },
+  "code-savant": {
+    "version": "*",
+    "reason": "AI code savant"
+  },
+  "code-ninja": {
+    "version": "*",
+    "reason": "AI code ninja"
+  },
+  "code-hero": {
+    "version": "*",
+    "reason": "AI code hero"
+  },
+  "code-guru": {
+    "version": "*",
+    "reason": "AI code guru"
+  },
+  "code-master": {
+    "version": "*",
+    "reason": "AI code master"
+  },
+  "code-pro": {
+    "version": "*",
+    "reason": "AI code pro"
+  },
+  "code-expert": {
+    "version": "*",
+    "reason": "AI code expert"
+  },
+  "code-wizard": {
+    "version": "*",
+    "reason": "AI code wizard"
+  },
+  "gpt-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "openai-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "claude-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "gemini-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "perplexity-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "phind-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "cody-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "kite-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "tabnine-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "codeium-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "blackbox-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "marscode-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "sprightly-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "bugbot-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "mentat-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "pilot-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "autopilot-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  },
+  "ai-companion-assistant": {
+    "version": "*",
+    "reason": "AI assistant"
+  }
+}

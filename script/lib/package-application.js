@@ -22,7 +22,7 @@ module.exports = function() {
     } with app name "${appName}"`
   );
   return runPackager({
-    appBundleId: 'com.github.atom',
+    appBundleId: 'com.github.atomic',
     appCopyright: `Copyright © 2014-${new Date().getFullYear()} GitHub, Inc. All rights reserved.`,
     appVersion: CONFIG.appMetadata.version,
     arch: process.platform === 'darwin' ? 'x64' : HOST_ARCH, // OS X is 64-bit only
@@ -38,7 +38,7 @@ module.exports = function() {
       'mac',
       'atom-Info.plist'
     ),
-    helperBundleId: 'com.github.atom.helper',
+    helperBundleId: 'com.github.atomic.helper',
     icon: path.join(
       CONFIG.repositoryRootPath,
       'resources',
@@ -54,7 +54,7 @@ module.exports = function() {
     prune: false,
     win32metadata: {
       CompanyName: 'GitHub, Inc.',
-      FileDescription: 'Atom',
+      FileDescription: 'Atomic',
       ProductName: CONFIG.appName
     }
   }).then(packagedAppPath => {

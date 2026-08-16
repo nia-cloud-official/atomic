@@ -54,6 +54,7 @@ module.exports = class PackageManager {
         : {};
     this.deprecatedPackages = packageJSON._deprecatedPackages || {};
     this.deprecatedPackageRanges = {};
+    this.aiBannedPackages = packageJSON._aiBannedPackages || {};
     this.initialPackagesLoaded = false;
     this.initialPackagesActivated = false;
     this.preloadedPackages = {};
@@ -105,6 +106,9 @@ module.exports = class PackageManager {
       packageJSON.packageDependencies != null
         ? packageJSON.packageDependencies
         : {};
+    this.deprecatedPackages = packageJSON._deprecatedPackages || {};
+    this.deprecatedPackageRanges = {};
+    this.aiBannedPackages = packageJSON._aiBannedPackages || {};
     this.triggeredActivationHooks.clear();
     this.activatePromise = null;
   }
@@ -267,6 +271,158 @@ module.exports = class PackageManager {
       this.deprecatedPackageRanges[metadata.version] = range;
     }
     return range.test(version);
+  }
+
+  isBannedAIPackage(name, metadata) {
+    const banned = this.aiBannedPackages[name];
+    if (banned) return true;
+
+    const lowerName = name.toLowerCase();
+    const aiKeywords = [
+      'copilot',
+      'gpt',
+      'openai',
+      'claude',
+      'gemini',
+      'perplexity',
+      'phind',
+      'cody',
+      'kite',
+      'tabnine',
+      'codeium',
+      'blackbox',
+      'marscode',
+      'sprightly',
+      'bugbot',
+      'mentat',
+      'pilot',
+      'autopilot',
+      'deepseek',
+      'qwen',
+      'zhipu',
+      'minimax',
+      'moonshot',
+      'baichuan',
+      'yi',
+      'mistral',
+      'llama',
+      'ollama',
+      'huggingface',
+      'langchain',
+      'mcp',
+      'modelcontextprotocol',
+      'model-context-protocol',
+      'ai-',
+      '-ai',
+      'ai_',
+      '_ai',
+      'intellicode',
+      'diffblue',
+      'codegpt',
+      'code-gpt',
+      'ai assistant',
+      'ai coding',
+      'ai pair',
+      'ai complete',
+      'ai suggest',
+      'ai generate',
+      'ai review',
+      'ai debug',
+      'ai test',
+      'ai docs',
+      'ai chat',
+      'ai bot',
+      'ai agent',
+      'neural',
+      'deep learning',
+      'machine learning',
+      'transformer',
+      'autocomplete-ai',
+      'smart-complete',
+      'smart-suggest',
+      'smart-review',
+      'smart-debug',
+      'smart-test',
+      'smart-docs',
+      'smart-chat',
+      'smart-commit',
+      'smart-pr',
+      'smart-explain',
+      'smart-translate',
+      'smart-generate',
+      'smart-refactor',
+      'smart-lint',
+      'smart-agent',
+      'ai-complete',
+      'ai-suggest',
+      'ai-review',
+      'ai-debug',
+      'ai-test',
+      'ai-docs',
+      'ai-chat',
+      'ai-bot',
+      'ai-agent',
+      'ai-commit',
+      'ai-pr',
+      'ai-explain',
+      'ai-translate',
+      'ai-generate',
+      'ai-refactor',
+      'ai-lint',
+      'ai-docs',
+      'code-assistant',
+      'code-buddy',
+      'code-companion',
+      'code-helper',
+      'code-wizard',
+      'code-mentor',
+      'code-tutor',
+      'code-reviewer',
+      'code-optimizer',
+      'code-fixer',
+      'code-formatter',
+      'code-analyzer',
+      'code-scanner',
+      'code-detector',
+      'code-predictor',
+      'code-suggester',
+      'code-recommender',
+      'code-enhancer',
+      'code-improver',
+      'code-polisher',
+      'code-refiner',
+      'code-simplifier',
+      'code-explain',
+      'code-docs',
+      'code-summary',
+      'code-notes',
+      'code-highlights',
+      'code-insights',
+      'code-intel',
+      'code-brain',
+      'code-mind',
+      'code-genius',
+      'code-savant',
+      'code-ninja',
+      'code-hero',
+      'code-guru',
+      'code-master',
+      'code-pro',
+      'code-expert'
+    ];
+
+    for (const keyword of aiKeywords) {
+      if (lowerName.includes(keyword)) return true;
+    }
+
+    if (metadata && metadata.description) {
+      const lowerDesc = metadata.description.toLowerCase();
+      for (const keyword of aiKeywords) {
+        if (lowerDesc.includes(keyword)) return true;
+      }
+    }
+
+    return false;
   }
 
   getDeprecatedPackageMetadata(name) {
@@ -704,6 +860,15 @@ module.exports = class PackageManager {
         `Could not load ${metadata.name}@${
           metadata.version
         } because it uses deprecated APIs that have been removed.`
+      );
+      return null;
+    }
+
+    if (this.isBannedAIPackage(metadata.name, metadata)) {
+      console.warn(
+        `Could not load ${metadata.name}@${
+          metadata.version
+        } because it is banned by Atomic's strict no-AI policy.`
       );
       return null;
     }

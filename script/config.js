@@ -20,6 +20,8 @@ const atomHomeDirPath =
 
 const appMetadata = require(path.join(repositoryRootPath, 'package.json'));
 const apmMetadata = require(path.join(apmRootPath, 'package.json'));
+const deprecatedPackagesMetadata = require('./deprecated-packages');
+const aiBannedPackagesMetadata = require('./ai-banned-packages');
 const computedAppVersion = computeAppVersion(
   process.env.ATOM_RELEASE_VERSION || appMetadata.version
 );
@@ -52,6 +54,8 @@ module.exports = {
   electronDownloadPath,
   atomHomeDirPath,
   homeDirPath,
+  deprecatedPackagesMetadata,
+  aiBannedPackagesMetadata,
   getApmBinPath,
   getNpmBinPath,
   getLocalNpmBinPath,
@@ -59,7 +63,7 @@ module.exports = {
 };
 
 function getChannelName(channel) {
-  return channel === 'stable' ? 'atom' : `atom-${channel}`;
+  return channel === 'stable' ? 'atomic' : `atomic-${channel}`;
 }
 
 function getChannel(version) {
@@ -75,8 +79,8 @@ function getChannel(version) {
 
 function getAppName(channel) {
   return channel === 'stable'
-    ? 'Atom'
-    : `Atom ${process.env.ATOM_CHANNEL_DISPLAY_NAME ||
+    ? 'Atomic'
+    : `Atomic ${process.env.ATOM_CHANNEL_DISPLAY_NAME ||
         channel.charAt(0).toUpperCase() + channel.slice(1)}`;
 }
 
@@ -84,9 +88,9 @@ function getExecutableName(channel, appName) {
   if (process.platform === 'darwin') {
     return appName;
   } else if (process.platform === 'win32') {
-    return channel === 'stable' ? 'atom.exe' : `atom-${channel}.exe`;
+    return channel === 'stable' ? 'atomic.exe' : `atomic-${channel}.exe`;
   } else {
-    return 'atom';
+    return 'atomic';
   }
 }
 
